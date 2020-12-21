@@ -1,13 +1,21 @@
 pipeline{
 agent{
-node{
-}}
+
+}
+
 
 stages{
-stage('init and plan'){
+stage('init '){
 steps{
 sh "sudo terraform init"
+
+}
+}
+stage("terraform plan "){
+steps{
+
 sh "sudo terraform plan"
 
 
-}}}}
+}}}
+}
