@@ -1,0 +1,13 @@
+pipeline{
+agent{
+node{
+}}
+
+stages{
+stage('init and plan'){
+steps{
+sh "sudo terraform init"
+sh "sudo terraform plan"
+
+
+}}}}
