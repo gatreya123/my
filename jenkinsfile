@@ -14,7 +14,7 @@ sh "terraform init"
 
 stage ('promotion'){
 steps{
-script{
+
 def userInput = input(
  id: 'userInput', message: 'Let\'s promote?', parameters: [
  [$class: 'TextParameterDefinition', defaultValue: 'uat', description: 'Environment', name: 'env'],
@@ -23,12 +23,12 @@ def userInput = input(
 echo ("Env: "+userInput['env'])
 echo ("Target: "+userInput['target']
 }
-}}
+}
 stage("terraform plan "){
 
 steps{
 sh "terraform plan"
 
 }}}
-
+}
 
