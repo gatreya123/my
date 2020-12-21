@@ -21,12 +21,13 @@ def userInput = input(
 ])
 
 steps{
+sh "terraform plan"
 echo ("Env: "+userInput['env'])
 echo ("Target: "+userInput['target']
 
 
 
-sh "terraform plan"
+
 
 
 }}}
